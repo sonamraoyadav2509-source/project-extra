@@ -1,0 +1,193 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   BODY BACKGROUND IMAGE
+========================= */
+body {
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(255, 244, 230, 0.85), rgba(255, 244, 230, 0.85)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061") no-repeat center center/cover;
+    padding-bottom: 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #ff7043, #ff9a3c);
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* =========================
+   RECIPES SECTION
+========================= */
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+/* =========================
+   RECIPE CARD
+========================= */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* FOOD IMAGE ON TOP OF CARD */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Different Images For Each Card */
+.card:nth-child(1)::before {
+    background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092");
+}
+
+.card:nth-child(2)::before {
+    background-image: url("https://images.unsplash.com/photo-1525755662778-989d0524087e");
+}
+
+.card:nth-child(3)::before {
+    background-image: url("https://images.unsplash.com/photo-1550547660-d9450f859349");
+}
+
+/* Push content down */
+.card h2 {
+    margin-top: 130px;
+    color: #e65100;
+}
+
+.card ul {
+    margin: 15px 0;
+    padding-left: 18px;
+}
+
+.card li {
+    margin-bottom: 6px;
+}
+
+/* BUTTON STYLE */
+.card button {
+    background: linear-gradient(135deg, #ff7043, #ff5722);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: linear-gradient(135deg, #e64a19, #bf360c);
+}
+
+/* =========================
+   GROCERY SECTION
+========================= */
+.grocery {
+    background: rgba(255, 255, 255, 0.95);
+    width: 85%;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.grocery h2 {
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+#groceryList {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#groceryList li {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    background: linear-gradient(135deg, #ff9a3c, #ff7043);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: linear-gradient(135deg, #f4511e, #d84315);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .recipes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

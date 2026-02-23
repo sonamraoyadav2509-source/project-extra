@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Prep for Busy Parents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🥗 Meal Prep for Busy Parents</h1>
+    <p>Quick • Healthy • Family Friendly</p>
+</header>
+
+<section class="recipes">
+
+    <!-- Recipe 1 -->
+    <div class="card">
+        <h2>🍗 Grilled Chicken Bowl</h2>
+        <p>Prep Time: 20 mins</p>
+        <ul>
+            <li>Chicken Breast</li>
+            <li>Rice</li>
+            <li>Broccoli</li>
+            <li>Olive Oil</li>
+        </ul>
+        <button onclick="addToList(['Chicken Breast','Rice','Broccoli','Olive Oil'])">
+            Add to Grocery List
+        </button>
+    </div>
+
+    <!-- Recipe 2 -->
+    <div class="card">
+        <h2>🍝 Pasta Primavera</h2>
+        <p>Prep Time: 25 mins</p>
+        <ul>
+            <li>Pasta</li>
+            <li>Bell Peppers</li>
+            <li>Zucchini</li>
+            <li>Tomato Sauce</li>
+        </ul>
+        <button onclick="addToList(['Pasta','Bell Peppers','Zucchini','Tomato Sauce'])">
+            Add to Grocery List
+        </button>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="card">
+        <h2>🥪 Turkey Sandwich Box</h2>
+        <p>Prep Time: 10 mins</p>
+        <ul>
+            <li>Whole Wheat Bread</li>
+            <li>Turkey Slices</li>
+            <li>Cheese</li>
+            <li>Lettuce</li>
+        </ul>
+        <button onclick="addToList(['Whole Wheat Bread','Turkey Slices','Cheese','Lettuce'])">
+            Add to Grocery List
+        </button>
+    </div>
+
+</section>
+
+<section class="grocery">
+    <h2>🛒 Grocery List</h2>
+    <ul id="groceryList"></ul>
+
+    <div class="buttons">
+        <button onclick="clearList()">Clear List</button>
+        <button onclick="printList()">Print List</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
